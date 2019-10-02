@@ -1,0 +1,23 @@
+﻿{% extends 'Gaming/base_gaming.html' %}
+
+{% block title%}
+    {{title}}  - {{block.super}}
+{% endblock%}
+
+{% block content %}
+
+<form action="{% url 'game_page' %}" method="get">
+    {% csrf_token %}
+
+    <div class="alert alert-primary" role="alert">
+        <h2 style="width:200%">{{ text_1 }}</h2>
+    </div>
+    
+    <h3>{{ text_2 }}</h3>
+    <h3>{{ text_3 }}</h3>
+
+    <input type="submit" class="btn btn-primary" value="{{button}}" name=player_name style="width:80"> 
+    
+</form>
+  
+{% endblock %}

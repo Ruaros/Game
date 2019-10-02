@@ -1,0 +1,28 @@
+﻿{% extends 'Gaming/base_gaming.html' %}
+
+{% block title%}
+    {{title}} - {{block.super}}
+{% endblock%}
+
+{% block content %}
+    <form action="{% url 'add_action_url' %}" method="get">
+        <h1 class="mt-5"> Action: </h1>
+        <input type="submit" class="btn btn-primary" value=Добавить name={{acting}}> 
+    </form>
+
+    {% for act in acts %}
+        <form action="{% url 'change_action_url' %}" method="get">
+            <div class="card">
+            <div class="card-header">
+  
+            </div>
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">{{ act.text }}</p>
+                    <input type="submit" class="btn btn-primary" value="Редактировать" name={{act.id}}_{{acting}}> 
+                    <input type="submit" class="btn btn-primary" value="Удалить" name={{act.id}}_{{acting}}> 
+                </div>
+            </div>
+        </form>
+    {% endfor %}
+{% endblock %}

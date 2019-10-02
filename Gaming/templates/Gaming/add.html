@@ -1,0 +1,14 @@
+﻿{% extends 'Gaming/base_gaming.html' %}
+
+{% block title%}
+    {{title}} - {{block.super}}
+{% endblock%}
+
+{% block content %}
+    <form action="{% url 'adding_action_url' %}" method="get">
+        <h1 class="mt-5"> Action: </h1>
+        <label for="exampletext">Условие</label>
+        <input type="text" class="form-control" name={{name}} placeholder="Введите новое условие игры" value={{value}}>
+        <input type="submit" class="btn btn-primary" value='Добавить' name={{act_id}}> 
+    </form>
+{% endblock %}
