@@ -86,7 +86,7 @@ def choise_name(request):
         
         return game_it(request)
         #return render(request, 'Gaming/game_page.html', context={'title': 'Игра начинается', 'name': request.GET['man_name']})
-
+        
 def game_it(request):
 
     #if request.method == "GET":

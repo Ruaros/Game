@@ -9,23 +9,27 @@
         function init() 
         {
             sec = {{ seconds }};
-            timerId = setInterval(tick, 1000);
+            timerId = setInterval(tick, 1000);      
         } 
+
         function tick()
         {
             sec--; 
-            if (sec<10) {document.getElementById("timer"). childNodes[0].nodeValue = "00:0" + String(sec); }
-            else {document.getElementById("timer"). childNodes[0].nodeValue = "00:" + String(sec); }
+            if (sec<10) {document.getElementById("timer"). childNodes[0].nodeValue = "00:0" + sec; }
+            else {document.getElementById("timer"). childNodes[0].nodeValue = "00:" + sec; }
 
             if (sec == 0) clearInterval(timerId);
-                {% url 'game_page' %}
+                          
         } 
 
     </script>
 {% endblock %}
 
-    {% block content %}
+{% block content %}
+    <form action="{% url 'game_page' %}" method="get">
+        {% csrf_token %} 
         <div id="timer" style="font-size: 600%">00:{{ seconds }}</div> 
-    {% endblock %}        
+        <input type="submit" class="btn btn-primary" value="Следующий" style="width:150">
+    </form>
+{% endblock %}        
  
-</html>
