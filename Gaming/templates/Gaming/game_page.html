@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<form action="{% url 'game_page' %}" method="get">
+<form action="{% url 'timer_url' %}" method="get">
     {% csrf_token %}
 
     <div class="alert alert-primary" role="alert">

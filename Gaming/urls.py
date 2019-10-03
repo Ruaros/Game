@@ -9,7 +9,6 @@ urlpatterns = [
     path('add/',     add_action,          name = "add_action_url"),
     path('adding/',  adding_action,       name = "adding_action_url"),
     path('change/',  change_action,       name = "change_action_url"),
-    #url(r'^$',       home,                name = 'home'),
-    path(r'^dtny',    dtny,                name = 'dtny'),
+    path('timer/',   timer,               name = "timer_url"),
         
     ]

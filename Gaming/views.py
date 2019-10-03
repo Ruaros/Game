@@ -134,9 +134,12 @@ def game_it(request):
         cont['text_1'] = '{a}, следующие {b} секунд твои'.format(a=first, b=number_of_second)
         cont['text_2'] = action
         cont['text_3'] = part_to_action
-        cont['button'] = "Поехали"#request.session['next_name'] 
+        cont['button'] = "Понеслась"#request.session['next_name'] 
 
     return render(request, 'Gaming/game_page.html', context=cont)
+
+def timer(request):
+    return render(request, 'Gaming/timer.html', context = {'title':'Время удовольствий', 'seconds': request.session.get('number_of_second')})
 
 class TagCreate(View):
     def get(self, request):

@@ -74,13 +74,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gaming\templates\Gaming\add.html" />
-    <Content Include="Gaming\templates\Gaming\dtny.html" />
     <Content Include="Gaming\templates\Gaming\first_player.html" />
     <Content Include="Gaming\templates\Gaming\game_page.html" />
     <Content Include="Gaming\templates\Gaming\get_names.html" />
     <Content Include="Gaming\templates\Gaming\base_gaming.html" />
     <Content Include="Gaming\templates\Gaming\index.html" />
     <Content Include="Gaming\templates\Gaming\settings.html" />
+    <Content Include="Gaming\templates\Gaming\timer.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
